@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pawflow/shared/themes/app_colors.dart';
 import 'package:pawflow/shared/themes/app_images.dart';
 import 'package:pawflow/shared/themes/app_text_styles.dart';
+import 'package:pawflow/shared/widgets/social_login/social_login_button.dart';
 
 class LoginPage extends StatefulWidget {
   LoginPage({Key? key}) : super(key: key);
@@ -33,10 +34,10 @@ class _LoginPageState extends State<LoginPage> {
                 child: Image.asset(
                   AppImages.person,
                   width: 208,
-                  height: 300,
+                  height: 350,
                 )),
             Positioned(
-                bottom: size.height * 0.18,
+                bottom: size.height * 0.05,
                 left: 0,
                 right: 0,
                 child: Column(
@@ -53,6 +54,15 @@ class _LoginPageState extends State<LoginPage> {
                         style: TextStyles.titleHome,
                       ),
                     ),
+                    Padding(
+                      padding:
+                          const EdgeInsets.only(left: 40, right: 40, top: 40),
+                      child: SocialLoginButton(
+                        onTap: () {
+                          print("Clicou");
+                        },
+                      ),
+                    )
                   ],
                 ))
           ],
