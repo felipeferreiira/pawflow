@@ -33,6 +33,8 @@ dependencies:
 
   google_sign_in_web: ^0.10.0+2
 
+  shared_preferences: ^2.0.7 #salva dados dentro do aplicativo
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
