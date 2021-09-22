@@ -7,17 +7,15 @@ import 'package:pawflow/modules/splash/splash_page.dart';
 import 'package:pawflow/shared/themes/app_colors.dart';
 
 class AppWidget extends StatelessWidget {
-  const AppWidget({Key? key}) : super(key: key);
+  AppWidget() {
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitDown,
+      DeviceOrientation.portraitUp,
+    ]);
+  }
 
   @override
   Widget build(BuildContext context) {
-    AppWidget() {
-      SystemChrome.setPreferredOrientations([
-        DeviceOrientation.portraitDown,
-        DeviceOrientation.portraitUp,
-      ]);
-    }
-
     return MaterialApp(
       title: 'Pay Flow',
       theme: ThemeData(
